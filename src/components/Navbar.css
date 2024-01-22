@@ -1,0 +1,48 @@
+
+.navbar {
+    background-color: #001f3f; /* Dark blue background color */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar a {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #ecf0f1; /* Lighter color on hover */
+  }
+  
+  .navbar-right {
+    display: flex;
+  }
+  
+  .login-signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px; /* Rounded corners */
+    background-color: #3498db; /* Light blue background color */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .login-signup:hover {
+    background-color: #001f3f; /* Dark blue background color on hover */
+    color: #fff; /* White text color on hover */
+  }
+  
