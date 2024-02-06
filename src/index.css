@@ -1,11 +1,7 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
 @tailwind utilities;
 body{
 height:100vh;
 overflow:auto;
 }
-=======
-@tailwind utilities;
->>>>>>> b80c47ec8c44704e1e0c1f22f1a427c378f007a1

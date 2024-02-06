@@ -46,9 +46,9 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   // your styling goes here
 }));
-// function createData(course: string, classs: string, link: string) {
-//   return { course, classs, link };
-// }
+function createData(course, classs, link) {
+  return { course, classs, link };
+}
 const rows = [
   createData('SPCC', 'Comps A', '/compsa'),
   createData('FOSIP', 'Comps B', '/compsb'),
