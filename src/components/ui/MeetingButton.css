@@ -1,0 +1,24 @@
+/* StartMeetingButton.css */
+
+/* StartMeetingButton.css */
+
+/* .start-meeting-container {
+    margin-top: 0px;
+    margin-left: 425px;
+  }
+   */
+  .start-meeting-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .start-meeting-button:hover {
+    background-color: #2980b9;
+  }
+  

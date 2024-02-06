@@ -1,0 +1,263 @@
+/* 
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .content-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .start-meeting-container {
+    margin-right: 10px;
+  }
+  
+  .calendar-container {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .public-holidays-container {
+    width: 15rem;
+  }
+  
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column;
+    }
+  
+    .public-holidays-container {
+      width: 100%; /* Full width on smaller screens */
+      /* margin-top: 10px; 
+    }
+  }
+   */
+
+/* Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar {
+  /* Add your existing navbar styles here */
+}
+.content-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-container {
+  max-width: 400px;
+  margin-top: 20px;
+  margin-left:35%;
+}
+.calendar-container {
+ 
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.public-holidays-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Add the rest of your existing styles */
+
+   /* .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh; 
+  }
+  
+  .content-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column; 
+    height: 100%; 
+  } */
+  
+  .start-meeting-container {
+    margin-top: 50px; 
+    margin-left:40%; 
+    
+  }
+  
+  /* .calendar-container {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-right:5px;
+  }
+  
+  .public-holidays-container {
+    width: 100%; 
+  } */
+
+  /* Home.css */
+
+.student-info-container {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #001f3f;
+    color: #ecf0f1;
+    text-align:center ;
+  }
+  
+  .student-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .student-info-table th,
+  .student-info-table td {
+    padding: 10px;
+    border: 1px solid #3498db;
+  }
+  
+  .student-info-table th {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .student-info-table td {
+    background-color: #ecf0f1;
+    color: #001f3f;
+  }
+  
+  .student-info-table td:first-child {
+    font-weight: bold;
+  }
+
+  .form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #0077be,#3498db);
+    border-radius: 10px;
+    overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    /* transform: rotateX(-10deg); */
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    animation: form-animation 0.5s ease-in-out;
+  }
+  /* Add these styles to your existing stylesheet, e.g., Home.css */
+
+  /* Home.css */
+
+/* Add this style for form container */
+/* .form-container {
+  max-width: 400px; 
+  margin-left:50px; 
+  margin-top: 50px;
+  padding: 20px;
+} */
+
+.form {
+  max-width: 400px; /* Adjust the max-width to your preference */
+  margin: auto; /* Center the form horizontally */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: linear-gradient(to bottom,bg-blue-100,bg-blue-100);
+  border-radius: 10px;
+  overflow: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  /* transform: rotateX(-10deg); */
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  animation: form-animation 0.5s ease-in-out;
+}
+
+/* Add the rest of your existing styles */
+
+  /* @keyframes form-animation {
+    from {
+      transform: rotateX(-30deg);
+      opacity: 0;
+    }
+  
+    to {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  } */
+  
+  .input {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    color: rgb(255, 255, 255);
+    border: 2px solid bg-blue-100;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  .input::placeholder {
+    color: #fff;
+  }
+  
+  .input:hover,
+  .input:focus {
+    border-color:bg-blue-100;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* transform: scale(1.05) rotateY(20deg); */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    outline: none;
+  }
+  
+  button {
+    padding: 30px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    /* transform: rotateX(-10deg); */
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+ 
+  button:hover {
+    background-color:#3498db;
+    font-size: 19px;
+    /* transform: scale(1.05) rotateY(20deg) rotateX(10deg); */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+
+  .centered-table {
+  max-width: 60%; /* Adjust the width as needed */
+  margin-top: 50px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
