@@ -1,25 +1,3 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// const Navbar = () => {
-//   return (
-//     <nav className="navbar">
-//       <div className="navbar-left">
-//         <Link to="/">Home</Link>
-//         {/* Add more links for other pages */}
-//       </div>
-//       <div className="navbar-right">
-//         <Link to="/login" className="login-signup">Login</Link>
-//         <Link to="/signup" className="login-signup">Signup</Link>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-// Navbar.jsx (using Tailwind CSS)
-
 import React from 'react';
 import "./Navbar.css";
 import { Link } from 'react-router-dom';
@@ -46,5 +24,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-

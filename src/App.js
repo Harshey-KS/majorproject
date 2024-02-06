@@ -1,4 +1,3 @@
-// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
@@ -13,12 +12,7 @@ import HomeStudent from './pages/HomeStudent';
 import Login from './pages/Login';
 import CompsA from './pages/CompsA';
 
-
-
-
-
 function App() {
-
   // const [initialFormData, setInitialFormData] = React.useState({ name: '', email: '' });
   // Wrap your entire application with AuthContextProvider
   return (
@@ -36,14 +30,12 @@ function App() {
           <Route path="/upload" element={<Upload />} />
           <Route path="/login" element={<Login />} />
           <Route path="/compsa" element={<CompsA />} />
-
-      
           {/* Add more routes as needed */}
         </Routes>
       </Router>
       {/* </FormContext.Provider> */}
     </AuthContextProvider>
   );
-}
+};
 
 export default App;
