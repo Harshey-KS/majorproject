@@ -1,41 +1,57 @@
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// import { AuthContextProvider, useAuthContext } from './context/AuthContext';
+
+// import Home from './pages/Home';
+// import Assignment from './pages/Assignment';
+// import CompsA from './pages/CompsA';
+
+
+
+// function App() {
+//   const { user } = useAuthContext();
+//   return (
+
+//       <Router>
+//         <Routes>
+          
+//           <Route path="/home" element={<Home/>} />
+//           <Route path="/compsa" element={<CompsA/>} />
+//           {/* Add more routes as needed */}
+//         </Routes>
+//       </Router>
+   
+//   );
+// };
+
+// export default App;
+
+
+// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import { AuthContextProvider } from './context/AuthContext';
+
 import Home from './pages/Home';
-import Assignments from './pages/Assignments';
-import Portion from './pages/Portion';
-import Dashboard from './pages/Dashboard';
-import Videocall from './pages/Videocall';
-import { AuthContextProvider, useAuthContext } from './context/AuthContext';
-import Upload from './pages/Upload';
-import Syllabus from './pages/Syllabus';
-import HomeStudent from './pages/HomeStudent';
-import Login from './pages/Login';
 import CompsA from './pages/CompsA';
+import Dashboard from './pages/Dashboard';
+
 
 function App() {
-  // const [initialFormData, setInitialFormData] = React.useState({ name: '', email: '' });
-  // Wrap your entire application with AuthContextProvider
   return (
-    <AuthContextProvider>
-       {/* <FormContext.Provider value={{ formData: initialFormData, handleSubmit: () => {} }}> Provide FormContext */}
+    <AuthContextProvider> {/* Wrap your components with AuthContextProvider */}
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/assignments" element={<Assignments/>} />
-          <Route path="/portion" element={<Portion />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/video" element={<Videocall />} />
-          <Route path="/home" element={<HomeStudent />} />
-          <Route path="/syllabus" element={<Syllabus />} />
-          <Route path="/upload" element={<Upload />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/compsa" element={<CompsA />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           {/* Add more routes as needed */}
         </Routes>
       </Router>
-      {/* </FormContext.Provider> */}
     </AuthContextProvider>
   );
-};
+}
 
 export default App;

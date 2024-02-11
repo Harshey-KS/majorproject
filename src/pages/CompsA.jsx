@@ -15,11 +15,10 @@
 
   import React, { useEffect,useState  } from 'react';
 import { useAuthContext } from '../context/AuthContext';
-import Navbar from '../components/Navbar';
 import Heading from '../components/ui/Heading';
 import Cards from '../components/ui/Cards';
 import axios from "axios";
-import StartMeetingButton from '../components/ui/startmeeting';
+import Nav from '../components/ui/Nav';
 
 const CompsA = () => {
   const { user } = useAuthContext();
@@ -54,12 +53,30 @@ const CompsA = () => {
 
   return (
     <div className="flex flex-col">
-      <Navbar />
-      <StartMeetingButton/>
+      <Nav/>
       <Cards cards={teacher?.classes} updatePortion={updatePortion} setTeacher={setTeacher}/>
     </div>
   );
 };
 
 export default CompsA;
+
+
+// // CompsA.jsx (Sample Page)
+// import React from 'react';
+// import { useAuthContext } from '../context/AuthContext';
+
+// const CompsA = () => {
+//   const { user } = useAuthContext(); // Use the user from AuthContext
+
+//   return (
+//     <div>
+//       <h1>Welcome to CompsA Page</h1>
+//       <p>User: {user ? user.name : 'No user logged in'}</p>
+//     </div>
+//   );
+// };
+
+// export default CompsA;
+
 

@@ -1,23 +1,20 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import Nav from '../components/ui/Nav';
 import { Calendar } from '../components/ui/calender';
 import PublicHolidays from '../components/ui/PublicHolidays';
-import './Home.css';
-import StudentForm from '../components/StudentForm';
-import CourseTable from '../components/ui/CourseTable';
+import List from '../components/List';
 
-const Home = () => {
-  return (    
-    <div className="home-container">
-      <Navbar />      
-      <Calendar />     
-      <div className="content-container">
-        <div style={{ textAlign: 'center', marginLeft:'25%'}}>
-          <CourseTable/>   
-        </div> 
-        <PublicHolidays />  
+const Home= () => {
+    return (
+      <div>
+        <Nav /> 
+        <Calendar/>
+        <PublicHolidays/>
+        <List/>
       </div>
-      </div>
-  );
-}
-export default Home;
+
+      
+    );
+  };
+  
+  export default Home;
