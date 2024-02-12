@@ -54,6 +54,8 @@ const useStyles = makeStyles({
   },
   input: {
     marginRight: "10px",
+    marginLeft: "10px",
+
   },
 });
 
@@ -183,7 +185,7 @@ function Todo() {
                               name="firstname"
                               onChange={(e) => handleInputChange(e, i)}
                             />
-                            <Button onClick={() => handleRemoveClick(i)}>
+                            <Button onClick={() => handleRemoveClick(i)} >
                               <ClearIcon />
                             </Button>
                           </div>

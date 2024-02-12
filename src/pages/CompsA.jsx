@@ -104,7 +104,7 @@ const CompsA = () => {
     <div className="flex flex-col">
       <Nav />
       <div className="flex flex-row-reverse"> {/* Container for both components */}
-        <div className="w-2/3 margin-right:5%"> {/* Width set to 1/4 of the container */}
+        <div className="w-9/12 margin-right:15%"> {/* Width set to 1/4 of the container */}
           <ListAssignment />
         </div>
         <div className="flex-grow"> {/* Takes remaining space */}

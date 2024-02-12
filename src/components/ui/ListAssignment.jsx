@@ -80,7 +80,7 @@ export default function ListAssignment() {
   };
 
   return (
-    <Paper sx={{ width: "55%" }}>
+    <Paper sx={{ width: "95%" }}>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
           {/* <TableHead>
@@ -103,13 +103,19 @@ export default function ListAssignment() {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={index}>
                     <TableCell>{row.name}</TableCell>
-                   
+{/*                    
                     <TableCell>
                       {row.code}
-                      <Button onClick={handleOpenSubmittedDialog} color="primary">
+                      <Button onClick={handleOpenSubmittedDialog} color="primary" >
                         <ArchiveIcon />
                       </Button>
-                    </TableCell>
+                    </TableCell> */}
+                    <TableCell style={{ textAlign: 'right' }}>
+  {row.code}
+  <Button onClick={handleOpenSubmittedDialog} color="primary" >
+    <ArchiveIcon />
+  </Button>
+</TableCell>
                     
                   </TableRow>
                 );
