@@ -167,7 +167,7 @@ function Todo() {
         >
           <TableHead>
             <TableRow>
-              <TableCell className={classes.cardHeader} align="center">ANNOUCEMENTS</TableCell>
+              <TableCell className={classes.cardHeader} align="center">ANNOUNCEMENTS</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

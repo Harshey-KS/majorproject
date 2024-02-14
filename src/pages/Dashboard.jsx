@@ -7,7 +7,7 @@ import { group } from "../helperFunctions";
 import PieCards from "../components/ui/PieCards";
 import BarChart from "../components/ui/BarChart";
 import NameTable from "../components/ui/NameTable";
-
+import Nav from '../components/ui/Nav';
 
 const Dashboard = () => {
   const [date, setDate] = useState(new Date());
@@ -88,22 +88,25 @@ const Dashboard = () => {
   }, [leaveRecords]);
 
   return (
-    <div className="h-full w-full p-2 flex-col ml-2">
+    <div>
+      <Nav/>
+    
+    <div className="h-full w-full p-2 flex-col ml-1">
       {/* 1 */}
       <PieCards
         leaves={{
-          sick: leaveRecords?.filter((e) => e.leaveType === "Sick").length,
-          annual: leaveRecords?.length,
+          sick: leaveRecords?.filter((e) => e.leaveType === "Sick").length,          
           casual: leaveRecords?.filter((e) => e.leaveType === "Casual").length,
         }}
       />
       {/* 2 */}
       <div className="flex">
-        <div className="flex-col m-2 ml-8">
+        {/* <div className="flex-col m-2 ml-8">
           <BarChart chartData={barData} className="m-2" />
-        </div>
+        </div> */}
       <NameTable/>
       </div>
+    </div>
     </div>
   );
 };

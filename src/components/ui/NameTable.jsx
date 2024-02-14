@@ -14,8 +14,8 @@ export default function NameTable() {
   ];
 
   return (
-    <div style={{ width: '200px',height:'500px',position: 'fixed', right: '0'}}>
-    <List sx={{ width: '100%', maxWidth: 350, bgcolor: '#e1f5fe', borderRadius: '12px',height:'100%' }}>
+    <div style={{ width: '200px',height:'500px',position:'fixed',right: '0'}}>
+    <List sx={{ width: '100%', maxWidth: 350, bgcolor: '#e1f5fe', borderTopLeftRadius: '12px',borderBottomLeftRadius: '12px',height:'100%' }}>
       {items.map((item, index) => (
         <ListItem key={index} disablePadding sx={{ '&:hover': { backgroundColor: '#f5f5f5' }}}>
           <ListItemAvatar>
