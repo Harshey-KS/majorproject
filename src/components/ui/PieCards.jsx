@@ -14,22 +14,16 @@ const PieCards = ({ leaves }) => {
     {
       remaining: leaves?.sick,
       typeOfLeave: "Attentive Students",
-      title: "Student Present",
+      title: "Students Attentive",
       color: "text-[#FFC444]",
       total: 60,
     },
-    // {
-    //   remaining: leaves?.annual,
-    //   typeOfLeave: "Annual Leaves Remaining",
-    //   title: "Total Annual Leaves",
-    //   color: "text-[#57D9AD]",
-    //   total: 30,
-    // },
+    
   ];
   return (
-    <div className="flex w-full justify-around -ml-4 -mr-2 ">
-      {pieCards?.map((card) => (
-        <div className="bg-white rounded-xl h-30 w-60 p-2 bigShadow">
+    <div className="flex w-full justify-around -ml-20 -mr-20 ">
+      {pieCards?.map((card, index) => (
+        <div key={index} className="bg-blue-100 rounded-xl h-30 w-60 p-2 bigShadow"style={{ margin: '0 10px'}} >
           {/* 1 */}
           <div className="flex justify-between -m-0.5 p-0">
             <div className="font-semibold text-[#54548C] text-xs">
@@ -75,4 +69,7 @@ const PieCards = ({ leaves }) => {
     </div>
   );
 };
+
 export default PieCards;
+
+
