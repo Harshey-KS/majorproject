@@ -1,6 +1,3 @@
-
-
-
 // import React, { useEffect, useState } from "react";
 // import { useAuthContext } from "../context/AuthContext";
 // import axios from "axios";
@@ -10,6 +7,8 @@
 // import BarChart from "../components/ui/BarChart";
 // import NameTable from "../components/ui/NameTable";
 // import Nav from '../components/ui/Nav';
+// import BLineChart from "../components/ui/BLineChart";
+
 
 // const Dashboard = () => {
 //   const [leaveRecords, setLeaveRecords] = useState();
@@ -25,8 +24,8 @@
 //     ],
 //     datasets: [
 //       {
-//         label: "Leaves",
-//         data: [80, 70, 40, 60, 100, 40], // Static data for the y-axis
+//         label: "Attention",
+//         data: [80, 70, 40, 60, 100, 40], // Example data multiplied for better visibility
 //         backgroundColor: "#5932EA",
 //         hoverBackgroundColor: "#BAE6FD",
 //       },
@@ -34,39 +33,47 @@
 //   });
 
 //   const fetchData = async () => {
-//     let res = await axios.get(`leave-records/${user?.id}`);
-//     if (res?.data) {
-//       setLeaveRecords(res?.data);
+//     try {
+//       const res = await axios.get(`leave-records/${user?.id}`);
+//       if (res?.data) {
+//         setLeaveRecords(res.data);
+//       }
+//     } catch (error) {
+//       console.error("Error fetching leave records:", error);
 //     }
 //   };
 
 //   useEffect(() => {
-//     if (user?.id) fetchData();
+//     if (user?.id) {
+//       fetchData();
+//     }
 //   }, [user]);
 
 //   useEffect(() => {
-//     // This part remains the same if you want to update the chart data dynamically based on leave records
-//     const entries = group(leaveRecords || [], (item) =>
-//       format(new Date(item?.dateOfLeave), "MMM")
-//     );
-//     const e = ["Rajas", "Ayush", "Kabir", "Rishabh", "Shruti", "Alia"].map((month) => ({
-//       leaves: entries[month] ? entries[month]?.length : 0,
-//       month,
-//     }));
-
-//     setBarData((prev) => ({
-//       ...prev,
-//       datasets: [
-//         {
-//           ...prev.datasets[0],
-//           data: e.map((data) => data?.leaves),
-//         },
-//       ],
-//     }));
+//     if (leaveRecords) {
+//       const entries = group(leaveRecords, (item) =>
+//         format(new Date(item?.dateOfLeave), "MMM")
+//       );
+//       const data = ["Rajas", "Ayush", "Kabir", "Rishabh", "Shruti", "Alia"].map(
+//         (month) => ({
+//           leaves: entries[month] ? entries[month].length : 0,
+//           month,
+//         })
+//       );
+//       setBarData((prev) => ({
+//         ...prev,
+//         datasets: [
+//           {
+//             ...prev.datasets[0],
+//             data: data.map((entry) => entry.leaves),
+//           },
+//         ],
+//       }));
+//     }
 //   }, [leaveRecords]);
 
 //   return (
-//     <div>
+//     <div className="bg-gray-100 h-screen"> {/* Apply bg-gray-100 class for light gray background */}
 //       <Nav/>
 //       <div className="h-full w-full p-2 flex-col ml-1">
 //         <PieCards
@@ -76,10 +83,11 @@
 //           }}
 //         />
 //         <div className="flex">
-//           <div className="flex-col m-2 ml-8">
+//           <div className="flex-col m-8 ml-14">
 //             <BarChart chartData={barData} className="m-2" />
 //           </div>
 //           <NameTable/>
+
 //         </div>
 //       </div>
 //     </div>
@@ -87,6 +95,13 @@
 // };
 
 // export default Dashboard;
+
+
+
+
+
+
+
 
 
 
@@ -99,14 +114,16 @@ import PieCards from "../components/ui/PieCards";
 import BarChart from "../components/ui/BarChart";
 import NameTable from "../components/ui/NameTable";
 import Nav from '../components/ui/Nav';
+import BLineChart from "../components/ui/BLineChart";
+
 
 const Dashboard = () => {
   const [leaveRecords, setLeaveRecords] = useState();
   const { user } = useAuthContext();
   const [barData, setBarData] = useState({
     labels: [
+      "Harshey",
       "Rajas",
-      "Ayush",
       "Kabir",
       "Rishabh",
       "Shruti",
@@ -115,7 +132,7 @@ const Dashboard = () => {
     datasets: [
       {
         label: "Attention",
-        data: [80, 70, 40, 60, 100, 40], // Example data multiplied for better visibility
+        data: [80, 70, 40, 60, 90, 40], // Example data multiplied for better visibility
         backgroundColor: "#5932EA",
         hoverBackgroundColor: "#BAE6FD",
       },
@@ -144,7 +161,7 @@ const Dashboard = () => {
       const entries = group(leaveRecords, (item) =>
         format(new Date(item?.dateOfLeave), "MMM")
       );
-      const data = ["Rajas", "Ayush", "Kabir", "Rishabh", "Shruti", "Alia"].map(
+      const data = ["Harshey", "Rajas", "Kabir", "Rishabh", "Shruti", "Alia"].map(
         (month) => ({
           leaves: entries[month] ? entries[month].length : 0,
           month,
@@ -163,8 +180,8 @@ const Dashboard = () => {
   }, [leaveRecords]);
 
   return (
-    <div>
-      <Nav/>
+    <div style={{ backgroundColor: '#e0e0e0', minHeight: '100vh' }}>
+      <Nav />
       <div className="h-full w-full p-2 flex-col ml-1">
         <PieCards
           leaves={{
@@ -177,6 +194,7 @@ const Dashboard = () => {
             <BarChart chartData={barData} className="m-2" />
           </div>
           <NameTable/>
+
         </div>
       </div>
     </div>

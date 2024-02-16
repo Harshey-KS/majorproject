@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    background-color: #595a5b; /* Replace with your desired background color */
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+  }
+  
