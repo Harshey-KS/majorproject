@@ -4,7 +4,7 @@ import React from "react";
 
 export default function PublicHolidays() {
   return (
-    <div className="flex justify-end items-end mt-2 mr-2.5">  
+    <div className="w-fit flex mt-2 mr-2.5">  
       <div className="flex flex-col bg-blue-100 w-[15rem] h-[15rem] rounded-2xl bigShadow p-2">
         <div className="text-[var(--primary2)] font-[600] text-md mt-1 pt-1 text-center">
           Public Holidays

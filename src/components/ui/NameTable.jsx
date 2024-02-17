@@ -9,7 +9,6 @@ import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import BLineChart from './BLineChart';
 
-
 const NameTable = () => {
   const [selectedName, setSelectedName] = React.useState(null);
 
@@ -38,7 +37,7 @@ const NameTable = () => {
   };
 
   return (
-    <div style={{ width: '210px', height: '600px', position: 'fixed', right: '0',top:'0' ,overflowY: 'auto' }}>
+    <div style={{ width: '210px', height: '600px', position: 'absolute', right: '0',top:'20' ,overflowY: 'auto' }}>
       <List sx={{ width: '100%', maxWidth: 350, bgcolor: '#e1f5fe', borderTopLeftRadius: '12px', borderBottomLeftRadius: '12px' }}>
         {items.map((item, index) => (
           <ListItem key={index} disablePadding sx={{ '&:hover': { backgroundColor: '#f5f5f5' }}}>
@@ -86,4 +85,3 @@ const NameTable = () => {
 }
 
 export default NameTable;
-
