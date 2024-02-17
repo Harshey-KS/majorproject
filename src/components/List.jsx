@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import './List.css'
+import './List.css';
 
 const CourseCategory = ({ category, courses }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +36,6 @@ const List = () => {
     { id: 1, name: 'TE Comps A' },
     { id: 2, name: 'SE Comps B' },
     { id: 3, name: 'TE AIML' },
-    // ... more courses
   ];
 
   const courseCategories = [

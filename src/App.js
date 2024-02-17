@@ -37,6 +37,8 @@ import { AuthContextProvider } from './context/AuthContext';
 import Home from './pages/Home';
 import CompsA from './pages/CompsA';
 import Dashboard from './pages/Dashboard';
+import CompsAstudent from './pages/CompsAstudent';
+
 
 
 function App() {
@@ -47,6 +49,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/compsa" element={<CompsA />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/compsastudent" element={<CompsAstudent />} />
           {/* Add more routes as needed */}
         </Routes>
       </Router>

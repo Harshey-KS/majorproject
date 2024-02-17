@@ -6,7 +6,7 @@ import { buttonVariants } from "./button";
 
 function Calendar({ className, classNames, showOutsideDays = true, ...props }) {
   return (
-    <div className="flex justify-end items-end mt-2">  
+    <div className="flex justify-end items-end mt-2 mr-5">  
       <div className="bg-white rounded-2xl bigShadow">  
       <DayPicker
       showOutsideDays={showOutsideDays}

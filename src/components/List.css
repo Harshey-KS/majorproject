@@ -1,84 +1,3 @@
-/* 
-
-
-
-   .course-categories {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .course-category {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .course-category:hover {
-    background-color: #f5f5f5;
-  }
-  
-  .category-button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: inherit;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .course-button i {
-    font-size: 1.2rem;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .course-button i.active {
-    transform: rotate(180deg);
-  }
-  
-  .course-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #ddd;
-    border-top: none;
-    border-radius: 4px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-in-out;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .course-category.open .course-list {
-    max-height: 200px;
-  }
-  
-  .course-list li {
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .course-list li:hover {
-    background-color: #f5f5f5;
-  }
-  
-
-  .fas.fa-chevron-down {
-    font-size: 1.2rem; 
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .course-button.active .fas.fa-chevron-down {
-    transform: rotate(180deg); 
-  }  */
-
 
 
   .course-categories {
@@ -87,21 +6,23 @@
     gap: 1rem;
     width: 70%; /* Adjust for smaller screens */
     margin-left: 5%;
-    margin-top:10%;
+    margin-top: 10%;
+    background-color:rgb(193, 190, 190);
+    border-radius: 20px;
   }
-  
+  /* rgb(0, 119, 255); */
   .course-category {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid black; /* Change border color to light blue */
+    border-radius: 20px;
     cursor: pointer;
   }
   
   .course-category:hover {
-    background-color: #f5f5f5;
+    background-color: rgba(175, 207, 237, 0.938);/* Change background color to light blue on hover */
   }
   
   .category-button {
@@ -109,7 +30,7 @@
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
-    color: inherit;
+    color: white; /* Change text color to blue */
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -128,13 +49,13 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(223, 223, 223); /* Change border color to light blue */
     border-top: none;
     border-radius: 4px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
-    background-color: #fff;
+    background-color: rgb(223, 223, 223); /* Change background color to light blue */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
   
@@ -144,19 +65,18 @@
   
   .course-list li {
     padding: 0.5rem 1rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(223, 223, 223); /* Change border color to light blue */
   }
   
-  .course-list li:hover {
-    background-color: #c0e4ff;
-  }
-  
-
+ .course-list li:hover {
+    background-color: lightgray; 
+  } 
   .fas.fa-chevron-down {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     transition: transform 0.2s ease-in-out;
   }
   
   .course-button.active .fas.fa-chevron-down {
-    transform: rotate(180deg); 
+    transform: rotate(180deg);
   }
+  

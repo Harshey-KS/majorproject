@@ -15,7 +15,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
+import Dashboard from '../../pages/Dashboard';
 const drawerWidth = 240;
 const navItems = ['Home', 'Assignment', 'Dashboard'];
 
@@ -39,7 +39,10 @@ function Nav(props) {
       {/* Use Link to navigate to different routes */}
       <ListItemButton sx={{ textAlign: 'center' }} component={Link} to={`/assignment`}>
         <ListItemText primary={item} />
-      </ListItemButton>
+      </ListItemButton> 
+       
+
+
     </ListItem>
   ))}
 </List>

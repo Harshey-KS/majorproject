@@ -1,6 +1,8 @@
 import React from 'react';
 import "./Navbar.css";
 import { Link } from 'react-router-dom';
+import Dashboard from '../pages/Dashboard';
+
 
 const Navbar = () => {
   return (
@@ -12,6 +14,7 @@ const Navbar = () => {
         {/* <Link to="/assignments">Assignments</Link> */}
         {/* <Link to="/portion">Portion</Link> */}
         <Link to="/dashboard">Dashboard</Link>
+        <Link to="/compsa">CompsA</Link>
         <div className="navbar-right">
           <Link to="/login" className="login-signup">Login</Link>
           <Link to="/signup" className="login-signup">Signup</Link>
