@@ -1,9 +1,10 @@
-
 // import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
 // import { config, library } from '@fortawesome/fontawesome-svg-core';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { fas } from '@fortawesome/free-solid-svg-icons';
 // import './List.css';
+// import CompsA from '../pages/CompsA';
 
 // const CourseCategory = ({ category, courses }) => {
 //   const [isOpen, setIsOpen] = useState(false);
@@ -19,13 +20,22 @@
 //         <i className={`fas fa-chevron-down ${isOpen ? 'active' : ''}`} />
 //       </button>
 //       {isOpen && (
+//         // <ul className="course-list">
+//         //   {courses.map((course) => (
+//         //     <li key={course.id}>
+//         //       <Link to="/compsa">{course.name}</Link> {/* Replace <a> with Link */}
+//         //     </li>
+//         //   ))}
+//         // </ul>
 //         <ul className="course-list">
-//           {courses.map((course) => (
-//             <li key={course.id}>
-//               <a href="#">{course.name}</a>
-//             </li>
-//           ))}
-//         </ul>
+//   {courses.map((course) => (
+//     <li key={course.id}>
+//       <Link to={`/${course.name.replace(/\s+/g, '').toLowerCase()}`}>
+//         {course.name}
+//       </Link>
+//     </li>
+//   ))}
+// </ul>
 //       )}
 //     </div>
 //   );
@@ -57,21 +67,25 @@
 // };
 
 // export default List;
-
-
-
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { config, library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import './List.css';
+import AddClassCard from './ui/AddClassCard';
+
 
 const CourseCategory = ({ category, courses }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleAddClass = (className) => {
+    // Add the new class to the courses array
+    const newCourse = { id: courses.length + 1, name: className };
+    // Update the state with the new course
+    courses.push(newCourse);
+    // Close the dropdown
+    setIsOpen(false);
   };
 
   return (
@@ -84,9 +98,15 @@ const CourseCategory = ({ category, courses }) => {
         <ul className="course-list">
           {courses.map((course) => (
             <li key={course.id}>
-              <Link to="/compsa">{course.name}</Link> {/* Replace <a> with Link */}
+              <Link to={`/${course.name.replace(/\s+/g, '').toLowerCase()}`}>
+                {course.name}
+              </Link>
             </li>
           ))}
+          {/* Render the AddClassCard component */}
+          <li>
+            <AddClassCard onAddClass={handleAddClass} />
+          </li>
         </ul>
       )}
     </div>

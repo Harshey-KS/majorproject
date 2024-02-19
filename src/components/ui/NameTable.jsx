@@ -37,8 +37,8 @@ const NameTable = () => {
   };
 
   return (
-    <div style={{ width: '210px', height: '600px', position: 'absolute', right: '0',top:'20' ,overflowY: 'auto' }}>
-      <List sx={{ width: '100%', maxWidth: 350, bgcolor: '#e1f5fe', borderTopLeftRadius: '12px', borderBottomLeftRadius: '12px' }}>
+    <div className='bg-blue-100' style={{ width: '18%', height: '90%', position: 'absolute', right: '0',top:'15' ,overflowY: 'auto'}}>
+      <List sx={{ width: '100%', maxWidth: 350, borderTopLeftRadius: '12px', borderBottomLeftRadius: '12px' }}>
         {items.map((item, index) => (
           <ListItem key={index} disablePadding sx={{ '&:hover': { backgroundColor: '#f5f5f5' }}}>
             <ListItemAvatar>

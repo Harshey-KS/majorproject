@@ -72,7 +72,7 @@ const Dashboard = () => {
   }, [leaveRecords]);
 
   return (
-    <div style={{ backgroundColor: '#e0e0e0', minHeight: '100vh' }}>
+    <div className="flex flex-col min-h-screen" style={{ backgroundColor: '#e0e0e0', minHeight: '100vh' }}>
       <Nav />
       <div className="h-full w-full p-2 ml-1">
         <NameTable/>

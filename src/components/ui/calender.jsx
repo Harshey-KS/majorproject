@@ -7,10 +7,10 @@ import { buttonVariants } from "./button";
 function Calendar({ className, classNames, showOutsideDays = true, ...props }) {
   return (
     <div className="w-fit flex justify-end items-end mt-2 mr-5">  
-      <div className="bg-white rounded-2xl bigShadow">  
+      <div className="bg-white rounded-xl bigShadow">  
       <DayPicker
       showOutsideDays={showOutsideDays}
-      className={cn("p-3 bg-blue-100 rounded-2xl", className)}  
+      className={cn("p-3 bg-blue-100 rounded-xl", className)}  
       
       classNames={{
         months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
@@ -36,8 +36,8 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }) {
           "h-6 w-6 p-0 font-normal aria-selected:opacity-100"
         ),
         day_selected:
-          "bg-[#5932EA] text-white font-bold hover:bg-[#BAE6FD] cursor-pointer hover:text-gray-600 hover:font-bold focus:bg-primary focus:text-primary-foreground",
-        day_today: "bg-[#5932EA] text-accent-foreground",
+          "bg-[#28a99e] text-white font-bold hover:bg-[#BAE6FD] cursor-pointer hover:text-gray-600 hover:font-bold focus:bg-primary focus:text-primary-foreground",
+        day_today: "bg-[#28a99e] text-accent-foreground",
         day_outside: "text-muted-foreground opacity-50",
         day_disabled: "text-muted-foreground opacity-50",
         day_range_middle:
