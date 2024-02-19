@@ -58,8 +58,6 @@
 
 // export default List;
 
-
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
@@ -75,11 +73,11 @@ const CourseCategory = ({ category, courses }) => {
   };
 
   return (
-    <div className={`course-category ${isOpen ? 'open' : ''}`}>
-      <button className="category-button" onClick={toggleDropdown}>
-        {category}
-        <i className={`fas fa-chevron-down ${isOpen ? 'active' : ''}`} />
-      </button>
+    <div className={`course-category ${isOpen ? 'open' : ''}`} onClick={toggleDropdown}>  
+        <button className="category-button">
+          {category}
+          <i className={`fas fa-chevron-down ${isOpen ? 'active' : ''}`} />
+        </button>
       {isOpen && (
         <ul className="course-list">
           {courses.map((course) => (

@@ -33,7 +33,7 @@ const Home = () => {
             <div className="flex flex-row justify-between mx-4">
                 <List />
                 <div className="ml-4">
-                <div className="ml-5">
+                <div className="ml-5"> 
                     <Calendar />
                   </div>
                   <div className="ml-2">

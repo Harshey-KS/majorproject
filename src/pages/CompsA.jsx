@@ -6,10 +6,12 @@ import axios from "axios";
 import ListAssignment from '../components/ui/ListAssignment';
 import Syllabus from '../components/ui/Syllabus';
 import Nav from '../components/ui/Nav';
+import { useNavigate } from 'react-router-dom';
 
 const CompsA = () => {
   const { user } = useAuthContext();
   const [teacher, setTeacher] = useState({});
+  const navigate = useNavigate()
 
   const fetchData = async () => {
     try {
@@ -33,6 +35,9 @@ const CompsA = () => {
       console.error('Error updating portion:', error);
     }
   };
+  const handleStartMeeting = () =>{
+    navigate("/lobby")
+  }
 
   useEffect(() => {
     if (user?.id) fetchData();
@@ -49,7 +54,7 @@ const CompsA = () => {
           <Todo />
           <Syllabus /> {/* Insert Syllabus component here */}
           <div className="mt-4 ml-16"> {/* Margin top to provide space */}
-            <button className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded" onClick={handleStartMeeting}>
               START MEETING
            
             </button>
