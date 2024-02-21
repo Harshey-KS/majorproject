@@ -21,6 +21,7 @@ const Home = () => {
                   </div>
                   <div className="ml-2 mt-3">
                   <PublicHolidays />
+             
                   </div>
                     
                 </div>

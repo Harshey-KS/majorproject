@@ -16,6 +16,8 @@ import HomeStudent from './pages/HomeStudent';
 import SignInModal from './pages/loginteacher';
 
 
+
+
 function App() {
   return (
     <AuthContextProvider> {/* Wrap your components with AuthContextProvider */}
@@ -30,6 +32,7 @@ function App() {
           <Route path='/room' element={<Room />}/>
           <Route path='/lobby' element={<Lobby />}/>
           <Route path="/homestudent" element={<HomeStudent />} />
+ 
           {/* Add more routes as needed */}
         </Routes>
       </Router>
@@ -38,5 +41,4 @@ function App() {
 }
 
 export default App;
-
 

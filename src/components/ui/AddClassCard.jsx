@@ -31,6 +31,7 @@ const useStyles = makeStyles({
   },
   detailsContainer: {
     marginTop: "20px",
+   
   },
 
 });
@@ -61,7 +62,7 @@ const AddClassCard = ({ onAddClass, onClose  }) => {
           </Typography>
         </div>
         <img src={Image} alt="Class Image" className={classes.image} />
-        <div className={classes.detailsContainer}>
+        <div className={classes.detailsContainer} >
           <TextField
             label="Subject Name"
             variant="outlined"

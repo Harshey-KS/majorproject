@@ -13,8 +13,8 @@ const NameTable = () => {
   const [selectedName, setSelectedName] = React.useState(null);
 
   const items = [
-    { avatar: '/static/images/avatar/1.jpg', primary: 'HARSHEY SOI', secondary: 'Attention: 93%' },
-    { avatar: '/static/images/avatar/2.jpg', primary: 'HARSHEY KAUR', secondary: 'Attention: 96%' },
+    { avatar: '/static/images/avatar/1.jpg', primary: 'HARSHEY KAUR', secondary: 'Attention: 93%' },
+    { avatar: '/static/images/avatar/2.jpg', primary: 'RAHUL DUA', secondary: 'Attention: 96%' },
     { avatar: '/static/images/avatar/3.jpg', primary: 'RAJAS BAADKAR', secondary: 'Attention: 82%' },
     { avatar: '/static/images/avatar/4.jpg', primary: 'KABIR MEHRA', secondary: 'Attention: 54%' },
     { avatar: '/static/images/avatar/2.jpg', primary: 'RISHABH MALIK', secondary: 'Attention: 86%' },

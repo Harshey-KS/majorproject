@@ -167,7 +167,7 @@ function Todo() {
         >
           <TableHead>
             <TableRow>
-              <TableCell className={classes.cardHeader} align="center">ANNOUNCEMENTS</TableCell>
+              <TableCell className={classes.cardHeader} style={{marginLeft:'40%'}}>ANNOUNCEMENTS</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -207,7 +207,7 @@ function Todo() {
             })}
           </TableBody>
         </Table>
-        <div className={classes.buttonContainer}>
+        <div className={classes.buttonContainer} style={{marginLeft:'15%'}}>
           <div>
             <Button onClick={handleAdd}>
               <AddBoxIcon onClick={handleAdd} />
