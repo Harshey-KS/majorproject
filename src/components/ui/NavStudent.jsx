@@ -10,9 +10,9 @@ import { useTheme } from '@mui/material/styles';
 import { ListItemText } from '@material-ui/core';
 
 
-const navItems = ['Home', 'Dashboard'];
+const navItems = ['Home'];
 
-const Nav = () => {
+const NavStudent = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -38,7 +38,7 @@ const Nav = () => {
                   '&:hover': { backgroundColor:'#1b093d' ,borderRadius:'5px'}, // Hover effect
                 }}
                 component={Link}
-                to={`/${item.toLowerCase()}`} // Dynamically generate the route based on the item
+    to={item.toLowerCase() === 'home' ? '/homestudent' : `/${item.toLowerCase()}`} // Dynamically generate the route based on the item
               >
                 <ListItemText primary={item} />
               </ListItemButton>
@@ -50,4 +50,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default NavStudent;

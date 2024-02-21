@@ -1,91 +1,42 @@
-// // HomeStudent.jsx
-
-import React, { useState } from 'react';
-import NavbarStudent from '../components/NavbarStudent';
+import React from 'react';
+import { makeStyles } from '@mui/styles';
 import { Calendar } from '../components/ui/calender';
 import PublicHolidays from '../components/ui/PublicHolidays';
-import Form from '../components/ui/Form'; // Assuming you have a StudentForm component
-import './Home.css';
+import List from '../components/List';
+import NavStudent from '../components/ui/NavStudent';
+import Image from '../assets/Image3.svg';
 
+const useStyles = makeStyles({
+  image: {
+    maxWidth: '600px', // Adjust the maximum width of the image
+    maxHeight: '600px', // Adjust the maximum height of the image
+    width: '100%', // Allow the width to adjust automatically based on the maximum width
+    height: '100%', // Allow the height to adjust automatically based on the maximum height
+    borderRadius: '20px', // Rounded corners
+  },
+});
 const HomeStudent = () => {
-  // Add state and handle functions for student form if needed
+  const classes = useStyles();
+    return (
+        <div className="flex flex-col min-h-screen" style={{ backgroundColor: '#e0e0e0', minHeight: '100vh' }}>
+            <NavStudent/> {/* Use Navbar from Navbar/index1 */}      
+            <div className="flex flex-row justify-between mx-4">
+            <div className=" mt-5" style={{marginLeft:'170px'}}>
+            <img src={Image} alt="Class Image" className={classes.image} />
+            </div>
+                <div className="ml-4">
+                <div className="ml-5 mt-5">
+                    <Calendar />
+                </div>
+                  <div className="ml-2 mt-3">
+                  <PublicHolidays />
+                  </div>
+                    
+                </div>
+            </div>
+            </div>
 
-  return (
-    <div className="home-container">
-      <NavbarStudent />
-      <div className="content-container">
-        <Form/>
-        <Calendar />     
-      </div>
-      <PublicHolidays />
-    </div>
-  );
+    );
 };
 
 export default HomeStudent;
-
-// import React, { useState, useContext } from 'react';
-// import NavbarStudent from '../components/NavbarStudent';
-// import { Calendar } from '../components/ui/calender';
-// import PublicHolidays from '../components/ui/PublicHolidays';
-// import Form from '../components/ui/Form';
-// import './Home.css';
-// import { FormContext } from '../context/FormContext'; // Import context
-
-// // ----------------- REMOVED: FormContext already created in FormContext.js
-// // export const FormContext = createContext();
-
-// const HomeStudent = () => {
-//   const [formData, setFormData] = useState({ name: '', email: '' });
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     setFormData({ name: e.target.elements.name.value, email: e.target.elements.email.value });
-//   };
-
-//   return (
-//     <FormContext.Provider value={{ formData, handleSubmit }}> {/* Provide context */}
-//       <div className="home-container">
-//         <NavbarStudent />
-//         <div className="content-container">
-//           <Form />
-//           <Calendar />
-//         </div>
-//         <PublicHolidays />
-//       </div>
-//     </FormContext.Provider>
-//   );
-// };
-
-// export default HomeStudent;
-
-
-
-// import React, { useState } from 'react';
-// import NavbarStudent from '../components/NavbarStudent'; // Assuming correct path
-// import { Calendar } from '../components/ui/calender';
-// import PublicHolidays from '../components/ui/PublicHolidays';
-// import Form from '../components/ui/Form';
-// import './Home.css'; // Assuming correct path
-
-// const HomeStudent = () => {
-//   const [formData, setFormData] = useState({ name: '', email: '' });
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     setFormData({ name: e.target.elements.name.value, email: e.target.elements.email.value });
-//   };
-
-//   return (
-//     <div className="home-container">
-//       <NavbarStudent />
-//       <div className="content-container">
-//         <Form onSubmit={handleSubmit} /> {/* Pass handleSubmit to Form */}
-//         <Calendar />
-//       </div>
-//       <PublicHolidays />
-//     </div>
-//   );
-// };
-
-// export default HomeStudent;

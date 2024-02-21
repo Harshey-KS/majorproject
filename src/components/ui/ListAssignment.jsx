@@ -14,6 +14,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import TextField from "@mui/material/TextField";
+import GradeAssignmentModal from "./GradeAssignmentModal";
 
 const columns = [
   { id: "name", label: "Name", minWidth: 170 },
@@ -79,23 +80,12 @@ export default function ListAssignment() {
     setAssignmentData({ ...assignmentData, [name]: value });
   };
 
+  
+
   return (
     <Paper sx={{ width: "95%" }}>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
-          {/* <TableHead>
-            <TableRow>
-              {columns.map((column) => (
-                <TableCell
-                  key={column.id}
-                  align={column.align}
-                  style={{ minWidth: column.minWidth }}
-                >
-                  {column.label}
-                </TableCell>
-              ))}
-            </TableRow>
-          </TableHead> */}
           <TableBody>
             {rows
               .slice(page * 15, page * 15 + 15) // Fixed rows per page to 10
@@ -103,13 +93,6 @@ export default function ListAssignment() {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={index}>
                     <TableCell>{row.name}</TableCell>
-{/*                    
-                    <TableCell>
-                      {row.code}
-                      <Button onClick={handleOpenSubmittedDialog} color="primary" >
-                        <ArchiveIcon />
-                      </Button>
-                    </TableCell> */}
                     <TableCell style={{ textAlign: 'right' }}>
   {row.code}
   <Button onClick={handleOpenSubmittedDialog} color="primary" >
@@ -123,13 +106,13 @@ export default function ListAssignment() {
           </TableBody>
         </Table>
       </TableContainer>
-      <div style={{ textAlign: 'center', marginBottom: '10px' }}>
-      <Button onClick={handleOpenAddDialog} variant="contained" color="primary" >
+      <div style={{ textAlign: 'center', marginBottom: '10px', padding: '20px' }}>
+      <Button onClick={handleOpenAddDialog} variant="contained" color="primary"  style={{ backgroundColor: '#1b093d' }} >
         Add Assignment
       </Button>
       </div>
       <Dialog open={isOpenAddDialog} onClose={handleCloseAddDialog}>
-        <DialogTitle>Add Assignment</DialogTitle>
+        <DialogTitle style={{ textAlign: 'center'}}>ADD ASSIGNMENT</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Please enter the assignment details:
