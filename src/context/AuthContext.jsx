@@ -1,3 +1,6 @@
+//AuthContext.jsx
+
+
 import { createContext, useEffect, useReducer, useContext } from "react";
 
 export const AuthContext = createContext();

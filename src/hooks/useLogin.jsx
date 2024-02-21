@@ -1,3 +1,5 @@
+//useLogin.jsx
+
 import { useState } from "react";
 import { useAuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -7,11 +9,13 @@ export const useLogin = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(null);
   const { dispatch } = useAuthContext();
+  const navigate = useNavigate();
 
   const login = async (email, password, isOauth) => {
     setIsLoading(true);
     setError(null);
 
+    // console.log(email, password); //post request to login
     const response = await axios
       .post("teachers/login", {
         email,
@@ -27,6 +31,7 @@ export const useLogin = () => {
         }, 2000);
       });
     const json = await response.data;
+    // console.log(json);
     localStorage.setItem("profile", JSON.stringify(json));
     dispatch({ type: "LOGIN", payload: json });
 
@@ -61,7 +66,8 @@ export const useRegister = () => {
 
     setIsLoading(false);
     return true;
-    };
+    // }
+  };
 
   return { register, isLoading, error };
 };
