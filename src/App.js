@@ -10,6 +10,8 @@ import CompsA from './pages/CompsA';
 import HomeStudent from './pages/HomeStudent';
 
 
+
+
 function App() {
   return (
     <AuthContextProvider> {/* Wrap your components with AuthContextProvider */}
@@ -20,6 +22,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/compsastudent" element={<CompsAstudent />} />
           <Route path="/homestudent" element={<HomeStudent />} />
+ 
           {/* Add more routes as needed */}
         </Routes>
       </Router>
@@ -28,5 +31,4 @@ function App() {
 }
 
 export default App;
-
 

@@ -7,7 +7,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
-import Image from '../../Assets/Image2.svg'; // Import your image here
+import Image from '../../assets/Image2.svg'; // Import your image here
 import { Link } from 'react-router-dom'; 
 
 

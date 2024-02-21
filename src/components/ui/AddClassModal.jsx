@@ -6,7 +6,7 @@ import { makeStyles } from '@mui/styles';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import AddClassCard from './AddClassCard'; // Import AddClassCard component
-import Image from '../../Assets/Image3.svg';
+import Image from '../../assets/Image3.svg';
 const useStyles = makeStyles({
   modalContainer: {
     display: 'flex',

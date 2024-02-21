@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Image from '../../Assets/Image.svg'; // Import your image here
+import Image from '../../assets/Image.svg'; // Import your image here
 
 const useStyles = makeStyles({
   cardContainer: {
@@ -31,6 +31,7 @@ const useStyles = makeStyles({
   },
   detailsContainer: {
     marginTop: "20px",
+   
   },
 
 
@@ -64,7 +65,7 @@ const AddClassCard = ({ onAddClass, onClose  }) => {
           </Typography>
         </div>
         <img src={Image} alt="Class Image" className={classes.image} />
-        <div className={classes.detailsContainer}>
+        <div className={classes.detailsContainer} >
           <TextField
             label="Subject Name"
             variant="outlined"

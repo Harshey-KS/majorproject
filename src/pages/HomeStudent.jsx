@@ -4,7 +4,7 @@ import { Calendar } from '../components/ui/calender';
 import PublicHolidays from '../components/ui/PublicHolidays';
 import List from '../components/List';
 import NavStudent from '../components/ui/NavStudent';
-import Image from '../Assets/Image3.svg';
+import Image from '../assets/Image3.svg';
 
 
 const useStyles = makeStyles({

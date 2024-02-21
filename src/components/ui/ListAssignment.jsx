@@ -14,7 +14,22 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import TextField from "@mui/material/TextField";
-import GradeAssignmentModal from "./GradeAssignmentModal";
+import { makeStyles } from '@mui/styles';
+import Image from'../../assets/Image4.svg';
+
+
+const useStyles = makeStyles({
+  modalContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  image: {
+    width: "50%",
+    height: "auto", 
+    borderRadius: "20px", 
+  },
+});
 
 const columns = [
   { id: "name", label: "Name", minWidth: 170 },
@@ -28,6 +43,9 @@ function createData(name, code) {
 const initialAssignmentState = { name: "", code: "" };
 
 export default function ListAssignment() {
+
+  const classes = useStyles(); 
+
   const [page, setPage] = React.useState(0);
   const [isOpenAddDialog, setIsOpenAddDialog] = React.useState(false);
   const [isOpenSubmittedDialog, setIsOpenSubmittedDialog] = React.useState(
@@ -84,11 +102,11 @@ export default function ListAssignment() {
 
   return (
     <Paper sx={{ width: "95%" }}>
-      <TableContainer sx={{ maxHeight: 440 }}>
+      <TableContainer sx={{ maxHeight: 390 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableBody>
             {rows
-              .slice(page * 15, page * 15 + 15) // Fixed rows per page to 10
+              .slice(page * 10, page * 10 + 10)// Fixed rows per page to 10
               .map((row, index) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={index}>
@@ -112,7 +130,10 @@ export default function ListAssignment() {
       </Button>
       </div>
       <Dialog open={isOpenAddDialog} onClose={handleCloseAddDialog}>
-        <DialogTitle style={{ textAlign: 'center'}}>ADD ASSIGNMENT</DialogTitle>
+        {/* <DialogTitle style={{ textAlign: 'center'}}>ADD ASSIGNMENT</DialogTitle> */}
+        <div style={{ marginLeft:'35%', marginTop:'5%' }}> 
+        <img src={Image} alt="Class Image" className={classes.image} />
+        </div>
         <DialogContent>
           <DialogContentText>
             Please enter the assignment details:
