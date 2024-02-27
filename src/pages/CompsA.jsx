@@ -117,7 +117,7 @@ return (
           <Syllabus /> {/* Insert Syllabus component here */}
         </div>
         <div className="text-center">
-          <a className="text-white py-2 px-4 rounded" style={{ backgroundColor: '#1b093d' }} href="http://127.0.0.1:5502/src/onlinemeet/lobby.html">
+          <a className="text-white py-2 px-4 rounded" style={{ backgroundColor: '#1b093d' }} href="http://127.0.0.1:5500/src/onlinemeet/lobby.html">
             START MEETING
           </a>
         </div>
