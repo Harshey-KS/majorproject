@@ -57,7 +57,7 @@ const AddClassCard = ({ onAddClass, onClose  }) => {
     <Card className={classes.cardContainer}>
       <CardContent>
         <div className={classes.cardHeader} >
-          <Typography variant="h5" component="div" style={{ color: '#1b093d' }} >
+          <Typography variant="h5" component="div" style={{ color: '#194ba1' }} >
             ADD A CLASS
           </Typography>
         </div>
@@ -79,7 +79,7 @@ const AddClassCard = ({ onAddClass, onClose  }) => {
           />
         </div>
         <div className={classes.buttonContainer}  style={{ marginLeft: '65px' ,marginTop:'20px'}}>
-          <Button variant="contained" onClick={handleSubmit} style={{ backgroundColor: '#1b093d' }}>Submit</Button>
+          <Button variant="contained" onClick={handleSubmit} style={{ backgroundColor: '#194ba1' }}>Submit</Button>
         </div>
       </CardContent>
     </Card>

@@ -106,7 +106,7 @@ export default function ListAssignment() {
         <Table stickyHeader aria-label="sticky table">
           <TableBody>
             {rows
-              .slice(page * 10, page * 10 + 10)// Fixed rows per page to 10
+              .slice(page * 10, page * 10 + 10)
               .map((row, index) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={index}>
@@ -125,7 +125,7 @@ export default function ListAssignment() {
         </Table>
       </TableContainer>
       <div style={{ textAlign: 'center', marginBottom: '10px', padding: '20px' }}>
-      <Button onClick={handleOpenAddDialog} variant="contained" color="primary"  style={{ backgroundColor: '#1b093d' }} >
+      <Button onClick={handleOpenAddDialog} variant="contained" color="primary"  style={{ backgroundColor: '#194ba1' }} >
         Add Assignment
       </Button>
       </div>

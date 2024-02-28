@@ -21,7 +21,7 @@ const Nav = () => {
   };
 
   return (
-    <div style={{ backgroundColor: '#1b093d', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px' }}>
+    <div style={{ backgroundColor: '#194ba1', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px' }}>
       <div style={{marginLeft:'10px'}}>
       <Typography variant="h6">
         Sardar Patel Institute Of Technology
@@ -30,7 +30,7 @@ const Nav = () => {
       {isSmallScreen ? (
         <MenuIcon style={{ cursor: 'pointer' }} onClick={handleDrawerToggle} />
       ) : (
-        <List style={{ display: 'flex', flexDirection: 'row', margin: 0, padding: 0 }}>
+        <List style={{ display: 'flex',flexDirection: 'row', margin: 0, padding: 0 }}>
           {navItems.map((item) => (
             <ListItem key={item} disablePadding>
               <ListItemButton

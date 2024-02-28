@@ -1,9 +1,10 @@
 .hero__section {
     padding: 3% 3%;
     margin-top: 74px;
-    background-color: #262625;
+    background-color: #e0e0e0;
     display: flex;
     justify-content: space-between;
+    color:#000000;
 }
 
 .hero__section__img img {
@@ -19,7 +20,7 @@
     font-size: 3.5rem;
     font-weight: 700;
     display: flex;
-    text-shadow: 2px 2px 10px #5eafe4;
+    text-shadow: 2px 2px 10px #5e6366;
     align-items: center;
     position: relative;
     z-index: 1;

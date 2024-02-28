@@ -29,7 +29,7 @@ const AddClassModal = ({ onAddClass }) => {
     <div style={{marginLeft:'120px'}}>
       <img src={Image} alt="Class Image" className={classes.image} />
       <div  style={{marginLeft:'230px', marginTop:'10px'}}>
-      <Button variant="contained" onClick={handleOpen} style={{ backgroundColor: '#1b093d' }}>Add Class</Button>
+      <Button variant="contained" onClick={handleOpen} style={{ backgroundColor: '#194ba1' }}>Add Class</Button>
       </div>
       <Modal
         open={open}

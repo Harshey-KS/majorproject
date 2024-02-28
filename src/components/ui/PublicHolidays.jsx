@@ -6,10 +6,10 @@ export default function PublicHolidays() {
   return (
     <div className="w-fit flex mt-2 mr-2.5">  
       <div className="flex flex-col bg-blue-100 w-[15rem] h-[15rem] rounded-xl bigShadow p-2">
-        <div className="text-[var(--primary2)] font-[600] text-md mt-1 pt-1 text-center">
+        <div className="text-[var(--primary2)] font-[600] text-md mt-1 pt-1 text-center text-black">
           Public Holidays
         </div>
-        <div className="flex-col p-px mt-5 overflow-y-auto">
+        <div className="flex-col p-px mt-5 overflow-y-auto text-black">
           {publicHolidays.map((holiday) => (
             <div className="flex flex-col px-3 border-b-[#C7C9CF] border-[1px] border-transparent hover:bg-zinc-200 duration-300 cursor-pointer hover:rounded-md hover:shadow hover:w-full">
               <div className="flex justify-between p-0 ">
