@@ -17,7 +17,7 @@ function App() {
           <Route path="/compsa" element={<CompsA />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/compsastudent" element={<CompsAstudent />} />
-          <Route path="/homepage" element={<Homepage />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/homestudent" element={<HomeStudent />} />
           {/* Add more routes as needed */}
         </Routes>
